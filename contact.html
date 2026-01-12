@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me | Amna</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <div class="logo">Portfolio<span>.</span></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Project</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact">
+    <h2 class="heading">Contact <span>Me!</span></h2>
+
+    <form id="contactForm" onsubmit="return validateForm(event)">
+        <div class="input-box">
+            <input type="text" id="userName" placeholder="Full Name" required>
+            <input type="email" id="userEmail" placeholder="Email Address" required>
+        </div>
+        <textarea id="userMsg" cols="30" rows="10" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+    </form>
+</section>
+
+<script>
+    function validateForm(event) {
+        event.preventDefault(); 
+        
+        let name = document.getElementById("userName").value;
+        let email = document.getElementById("userEmail").value;
+        let message = document.getElementById("userMsg").value;
+
+        if(name && email && message) {
+            alert("Hi " + name + ", thank you for your message! I will contact you soon.");
+            document.getElementById("contactForm").reset();
+            return true;
+        } else {
+            alert("Please fill all the fields.");
+            return false;
+        }
+    }
+</script>
+
+    <footer>
+        <div class="footer-text">
+            <p>Copyright &copy; 2026 by Amna | All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+

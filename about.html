@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Amna Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <div class="logo">Portfolio<span>.</span></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="projects.html">Project</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="home" style="gap: 5rem;"> <div class="home-img">
+            <div class="glowing-circle">
+                <img src="your-image.jpg" alt="Amna">
+            </div>
+        </div>
+
+        <div class="home-content">
+            <h2 class="heading" style="text-align: left; margin-bottom: 1rem;">About <span>Me</span></h2>
+            <h3>Full Stack Developer!</h3>
+            <p>I am currently following the Higher National Diploma in Information Technology (HND IT). Throughout my academic journey, I have developed a deep understanding of user experience (UX) and user interface (UI) principles.</p>
+            <p>I am skilled in HTML, CSS, and JavaScript, focusing on creating responsive and modern designs that provide a seamless user experience.</p>
+            
+            <a href="#" class="btn" onclick="showMore()">Read More</a>
+            <p id="more-text" style="display:none; margin-top:20px; color: #0ef;">
+                My career objective is to become a skilled IT professional and contribute to the growth of the technology industry by solving complex problems with creative solutions.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-text">
+            <p>Copyright &copy; 2026 by Amna | All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function showMore() {
+            var x = document.getElementById("more-text");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
+
